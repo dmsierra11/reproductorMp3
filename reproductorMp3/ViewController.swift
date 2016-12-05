@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         // Carga la lista de archivos del directorio documentos
         let fm = FileManager.default
         let allfiles = try? fm.contentsOfDirectory(atPath: documentsPath.path)
-        print(allfiles)
+        print(allfiles!)
         
         let soundname = allfiles![0] // reproduce el primero
         let soundpathURL = documentsPath.appendingPathComponent(soundname)
