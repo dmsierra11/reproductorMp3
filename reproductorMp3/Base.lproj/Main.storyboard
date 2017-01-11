@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LMX-dx-5OZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LMX-dx-5OZ">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -80,60 +79,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vV3-Cg-g5G">
-                                <rect key="frame" x="15" y="89" width="287" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNt-oX-13U">
-                                <rect key="frame" x="127" y="145" width="61" height="30"/>
-                                <state key="normal" title="Play"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="VNt-oX-13U">
+                                <rect key="frame" x="128" y="382" width="65" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="play"/>
                                 <connections>
                                     <action selector="btnPlay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="smc-RT-79d"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWf-HQ-2jw">
-                                <rect key="frame" x="15" y="145" width="63" height="30"/>
-                                <state key="normal" title="Rewind"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="mWf-HQ-2jw">
+                                <rect key="frame" x="27" y="382" width="65" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="skip-previous"/>
                                 <connections>
                                     <action selector="btnRewind:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m7P-vY-MmC"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UDZ-6j-j6R">
-                                <rect key="frame" x="231" y="145" width="56" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="sUh-5y-syt">
+                                <rect key="frame" x="229" y="382" width="65" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0tv-6k-BxN">
-                                        <rect key="frame" x="0.0" y="0.0" width="56" height="30"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUh-5y-syt">
-                                                <rect key="frame" x="0.0" y="0.0" width="56" height="30"/>
-                                                <state key="normal" title="Forward"/>
-                                                <connections>
-                                                    <action selector="btnForward:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UW4-Lw-veX"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
+                                <state key="normal" image="skip-next"/>
+                                <connections>
+                                    <action selector="btnForward:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UW4-Lw-veX"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lindsey_sample" translatesAutoresizingMaskIntoConstraints="NO" id="in9-RK-Jxl">
+                                <rect key="frame" x="15" y="143" width="287" height="206"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vV3-Cg-g5G">
+                                <rect key="frame" x="15" y="87" width="287" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="VNt-oX-13U" firstAttribute="centerX" secondItem="vV3-Cg-g5G" secondAttribute="centerX" id="7k5-yP-vJa"/>
-                            <constraint firstItem="VNt-oX-13U" firstAttribute="top" secondItem="vV3-Cg-g5G" secondAttribute="bottom" constant="26" id="Cw7-OX-GHZ"/>
-                            <constraint firstItem="mWf-HQ-2jw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="O6q-Mk-q3d"/>
-                            <constraint firstItem="vV3-Cg-g5G" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Q17-1v-PNj"/>
-                            <constraint firstItem="mWf-HQ-2jw" firstAttribute="centerY" secondItem="VNt-oX-13U" secondAttribute="centerY" id="agw-3J-yoJ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="sUh-5y-syt" secondAttribute="trailing" constant="16" id="baD-SQ-KB9"/>
-                            <constraint firstItem="VNt-oX-13U" firstAttribute="leading" secondItem="mWf-HQ-2jw" secondAttribute="trailing" constant="10" id="kST-I5-19M"/>
-                            <constraint firstItem="vV3-Cg-g5G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nhx-gP-HZ2"/>
-                            <constraint firstItem="sUh-5y-syt" firstAttribute="centerY" secondItem="VNt-oX-13U" secondAttribute="centerY" id="xaR-qX-mYS"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="lblSongName" destination="vV3-Cg-g5G" id="eDA-Un-bmw"/>
+                        <outlet property="playButton" destination="VNt-oX-13U" id="jIh-0S-rMO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -141,4 +127,10 @@
             <point key="canvasLocation" x="1115.625" y="241.25"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="lindsey_sample" width="1240" height="1240"/>
+        <image name="play" width="32" height="32"/>
+        <image name="skip-next" width="32" height="32"/>
+        <image name="skip-previous" width="32" height="32"/>
+    </resources>
 </document>

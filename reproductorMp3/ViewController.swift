@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     let documentsPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
     
@@ -17,12 +17,21 @@ class ViewController: UIViewController {
     var song : String = ""
     
     var songList: [String] = []
-    var songPos: Int = -1;
+    var songPos: Int = -1
 
     @IBOutlet var lblSongName: UILabel!
     
+    @IBOutlet var playButton: UIButton!
+    
     @IBAction func btnPlay(_ sender: UIButton) {
-        playSound(soundname: song)
+        if (!player.isPlaying){
+            playSound()
+            playButton.setImage(UIImage(named: "play.png"), for: UIControlState.normal)
+        } else {
+            player.pause()
+            playButton.setImage(UIImage(named: "pause.png"), for: UIControlState.normal)
+        }
+        
     }
     
     @IBAction func btnRewind(_ sender: UIButton){
@@ -31,10 +40,14 @@ class ViewController: UIViewController {
         }
         song = songList[songPos]
         lblSongName.text = song
-        playSound(soundname: song)
+        playSound()
     }
     
     @IBAction func btnForward(_ sender: UIButton){
+        forwardSong()
+    }
+    
+    func forwardSong(){
         if (songPos+1 < songList.count){
             songPos+=1
         } else {
@@ -42,13 +55,23 @@ class ViewController: UIViewController {
         }
         song = songList[songPos]
         lblSongName.text = song
-        playSound(soundname: song)
+        playSound()
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         song = songList[songPos]
         lblSongName.text = song
+//        player.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        initAudioPlayer()
+    }
+    
+    func initAudioPlayer(){
+        let soundpathURL = documentsPath.appendingPathComponent(song)
+        player = try! AVAudioPlayer(contentsOf: soundpathURL)
+        player.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,11 +79,14 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func playSound (soundname: String) {
-        let soundpathURL = documentsPath.appendingPathComponent(soundname)
-        player = try! AVAudioPlayer(contentsOf: soundpathURL)
+    func playSound () {
+        initAudioPlayer()
         player.prepareToPlay()
         player.play()
+    }
+    
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        forwardSong()
     }
     
 }

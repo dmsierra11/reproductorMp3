@@ -26,12 +26,12 @@ class _TableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         let documentsPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-        //print(documentsPath.path)
+        print(documentsPath.path)
         
         // Carga la lista de archivos del directorio documentos
         let fm = FileManager.default
         let allfiles = try? fm.contentsOfDirectory(atPath: documentsPath.path)
-        //print(allfiles!)
+        print(allfiles!)
         
         canciones = allfiles!
         
