@@ -80,9 +80,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="VNt-oX-13U">
-                                <rect key="frame" x="128" y="382" width="65" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="VNt-oX-13U">
+                                <rect key="frame" x="128" y="422" width="65" height="48"/>
                                 <state key="normal" image="play"/>
                                 <connections>
                                     <action selector="btnPlay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="smc-RT-79d"/>
@@ -119,7 +118,9 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="vV3-Cg-g5G" secondAttribute="trailing" constant="-20" id="JdT-77-ctm"/>
                             <constraint firstItem="vV3-Cg-g5G" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="MEm-pg-LnD"/>
+                            <constraint firstItem="VNt-oX-13U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NVG-9c-oJA"/>
                             <constraint firstItem="vV3-Cg-g5G" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="afe-vo-NKX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VNt-oX-13U" secondAttribute="bottom" constant="40" id="dCt-ft-mwl"/>
                         </constraints>
                     </view>
                     <connections>
