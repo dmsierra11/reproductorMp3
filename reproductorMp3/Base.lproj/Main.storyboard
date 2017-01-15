@@ -101,9 +101,8 @@
                                     <action selector="btnForward:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UW4-Lw-veX"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lindsey_sample" translatesAutoresizingMaskIntoConstraints="NO" id="in9-RK-Jxl">
-                                <rect key="frame" x="15" y="143" width="399" height="271"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="lindsey_sample" translatesAutoresizingMaskIntoConstraints="NO" id="in9-RK-Jxl">
+                                <rect key="frame" x="0.0" y="72" width="320" height="496"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vV3-Cg-g5G">
                                 <rect key="frame" x="0.0" y="87" width="320" height="27"/>
@@ -114,6 +113,8 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="in9-RK-Jxl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="3Fr-D7-Qda"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="in9-RK-Jxl" secondAttribute="trailing" constant="-16" id="4EW-tV-W8v"/>
                             <constraint firstItem="sUh-5y-syt" firstAttribute="centerY" secondItem="VNt-oX-13U" secondAttribute="centerY" id="FDt-lz-Bwh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vV3-Cg-g5G" secondAttribute="trailing" constant="-20" id="JdT-77-ctm"/>
                             <constraint firstItem="vV3-Cg-g5G" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="MEm-pg-LnD"/>
@@ -123,6 +124,10 @@
                             <constraint firstItem="mWf-HQ-2jw" firstAttribute="centerY" secondItem="VNt-oX-13U" secondAttribute="centerY" id="c92-1B-Zl3"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VNt-oX-13U" secondAttribute="bottom" constant="40" id="dCt-ft-mwl"/>
                             <constraint firstItem="VNt-oX-13U" firstAttribute="leading" secondItem="mWf-HQ-2jw" secondAttribute="trailing" constant="36" id="eAc-kE-XEZ"/>
+                            <constraint firstItem="in9-RK-Jxl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="f4y-Oc-CAM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="in9-RK-Jxl" secondAttribute="bottom" id="tkj-0i-qkI"/>
+                            <constraint firstItem="in9-RK-Jxl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uGL-SZ-dtE"/>
+                            <constraint firstItem="in9-RK-Jxl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wxU-lk-yvW"/>
                         </constraints>
                     </view>
                     <connections>
@@ -132,7 +137,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1114.4927536231885" y="240.48913043478262"/>
+            <point key="canvasLocation" x="1113.75" y="239.78873239436621"/>
         </scene>
     </scenes>
     <resources>
