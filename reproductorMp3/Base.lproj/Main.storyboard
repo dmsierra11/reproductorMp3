@@ -101,7 +101,7 @@
                                     <action selector="btnForward:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UW4-Lw-veX"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="lindsey_sample" translatesAutoresizingMaskIntoConstraints="NO" id="in9-RK-Jxl">
+                            <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="lindsey_sample" translatesAutoresizingMaskIntoConstraints="NO" id="in9-RK-Jxl">
                                 <rect key="frame" x="0.0" y="72" width="320" height="496"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vV3-Cg-g5G">
@@ -131,6 +131,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imageAlbum" destination="in9-RK-Jxl" id="Z4h-PL-sW8"/>
                         <outlet property="lblSongName" destination="vV3-Cg-g5G" id="eDA-Un-bmw"/>
                         <outlet property="playButton" destination="VNt-oX-13U" id="jIh-0S-rMO"/>
                     </connections>
