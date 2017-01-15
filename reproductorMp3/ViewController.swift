@@ -26,10 +26,10 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     @IBAction func btnPlay(_ sender: UIButton) {
         if (!player.isPlaying){
             playSound()
-            playButton.setImage(UIImage(named: "play.png"), for: UIControlState.normal)
+            playButton.setImage(UIImage(named: "pause.png"), for: UIControlState.normal)
         } else {
             player.pause()
-            playButton.setImage(UIImage(named: "pause.png"), for: UIControlState.normal)
+            playButton.setImage(UIImage(named: "play.png"), for: UIControlState.normal)
         }
         
     }
